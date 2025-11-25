@@ -33,6 +33,7 @@ _init() {
 
     # Extract release string.
     release_str=$(echo $MC_RELEASE | tr '[:upper:]' '[:lower:]')
+    #release_str="1.0.0.8"
 
     # Verify release string.
     if [ -z "$release_str" ]; then
@@ -41,7 +42,7 @@ _init() {
     fi
 
     # List of supported architectures
-    SUPPORTED_OSARCH='linux/amd64 linux/ppc64le windows/amd64 darwin/amd64'
+    SUPPORTED_OSARCH='linux/amd64 linux/ppc64le windows/amd64 darwin/amd64 linux/arm64'
 
     ## System binaries
     CP=`which cp`
